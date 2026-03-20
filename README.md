@@ -18,13 +18,13 @@ Este repositório organiza os exemplos, exercícios e projetos desenvolvidos ao 
 ## Estrutura
 
 ```text
-.
 |-- exercicios/
 |   |-- lista-01/
-|   |-- lista-02/
 |   `-- ...
-|-- projeto
+|
+|-- projeto/
 |   `-- ...
+|
 `-- README.md
 ```
 
@@ -35,13 +35,12 @@ Este repositório organiza os exemplos, exercícios e projetos desenvolvidos ao 
 		<td align="center">
 			<a href="https://github.com/ddiangelo02" target="_blank">
 				<img src="https://github.com/ddiangelo02.png" width="100px" alt="Avatar de ddiangelo02" /><br>
-				<sub><b>ddiangelo02</b></sub>
+                <p>Dailane Florencio<br></p>
 			</a>
 		</td>
         <td align="center">
 			<a href="https://github.com/ThiMoreira00" target="_blank">
-				<img src="https://github.com/thimoreira00.png" width="100px" alt="Avatar de ThiMoreira00" /><br>
-				<sub><b>ThiMoreira00</b></sub>
+				<img src="https://github.com/thimoreira00.png" width="100px" alt="Avatar de ThiMoreira00" /><br><p>Thiago Moreira</p>
 			</a>
 		</td>
 	</tr>
