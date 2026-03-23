@@ -59,6 +59,17 @@ public class ProgWebI_L1 {
                 case 8:
                     exercicio08();
                     break;
+
+                case 9:
+                    exercicio09();
+                    break;
+                case 10:
+                    exercicio10();
+                    break;
+
+                case 11:
+                    exercicio11();
+                    break;
             }
 
             System.out.println("\nPrograma encerrado!\n\n");
@@ -239,6 +250,73 @@ public class ProgWebI_L1 {
             System.out.printf("O aluno foi reprovado na AF. \nO resultado final da nota é: %.1f", RF);
         }
         return RF;
+    }
+
+    /**
+     * Q9: Faça um programa na linguagem Java que receba três números pelo
+     * teclado e mostre, no console, o maior deles.
+     */
+    public static void exercicio09() {
+        float n1, n2, n3, maior;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Insira os três números:");
+        n1 = scanner.nextFloat();
+        n2 = scanner.nextFloat();
+        n3 = scanner.nextFloat();
+
+        if (n1 > n2 && n1 > n3) {
+            maior = n1;
+        } else if (n2 > n3) {
+            maior = n2;
+        } else {
+            maior = n3;
+        }
+        System.out.printf("O maior número dentre os escolhidos é: %.1f", maior);
+        //scanner.close();
+    }
+
+    /**
+     * Q10: Faça um programa na linguagem Java que receba um número inteiro pelo
+     * teclado e mostre, no console, se o número inteiro é par ou ímpar.
+     */
+    public static void exercicio10() {
+        int num;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Insira o número: ");
+        num = scanner.nextInt();
+
+        if (num % 2 == 0) {
+            System.out.printf("O número %d é par!", num);
+        } else {
+            System.out.printf("O número %d é ímpar!", num);
+        }
+        //scanner.close();
+    }
+
+    /**
+     * Q11: Faça um programa na linguagem Java que mostre, no console, a tabuada
+     * de multiplicação de um número inteiro entre 0 e 10. O programa só pode
+     * receber, pelo teclado, números inteiros de 0 a 10 e utilize, na
+     * resolução, a estrutura de repetição for.
+     */
+    public static void exercicio11() {
+        int num;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Insira um número de 0 a 10: ");
+        num = scanner.nextInt();
+
+        if (num < 0 || num > 10) {
+            System.out.printf("Numero Inválido! Insira um número de 0 a 10.");
+        } else {
+            System.out.printf("\nTabuada do %d\n\n", num);
+            for (int i = 0; i <= 10; i++) {
+                System.out.printf("%d x %d = %d\n", num, i, (num * i));
+            }
+        }
+        //scanner.close();   
     }
 
 }
