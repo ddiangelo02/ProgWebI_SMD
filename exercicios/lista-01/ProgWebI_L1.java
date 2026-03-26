@@ -9,6 +9,7 @@ package com.mycompany.progwebi.e1;
 // Importação de classe
 import java.util.Scanner;
 import java.lang.Math;
+import java.util.Arrays;
 
 // Classe principal
 public class ProgWebI_L1 {
@@ -70,6 +71,33 @@ public class ProgWebI_L1 {
                 case 11:
                     exercicio11();
                     break;
+
+                case 12:
+                    exercicio12();
+                    break;
+                    
+                case 13:
+                    exercicio13();
+                    break;
+                    
+                    case 14:
+                    exercicio14();
+                    break;
+                    
+                    case 15:
+                    exercicio15();
+                    break;
+                    
+                    case 16:
+                    exercicio16();
+                    break;
+                    
+                    case 17:
+                    exercicio17();
+                    break;
+                    
+                    
+                    
             }
 
             System.out.println("\nPrograma encerrado!\n\n");
@@ -319,4 +347,147 @@ public class ProgWebI_L1 {
         //scanner.close();   
     }
 
+    /**
+     * Q12: Faça um programa na linguagem Java que peça uma nota pelo teclado de
+     * 0 a 10. Mostre uma mensagem, no console, caso o valor seja inválido (nota
+     * menor que 0 ou maior 10) e continue pedindo notas até que o usuário
+     * informe um valor válido
+     */
+    public static void exercicio12() {
+        float num;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Insira uma nota de 0 a 10: ");
+        num = scanner.nextFloat();
+
+        while (num < 0 || num > 10) {
+            System.out.println("Número inválido! Por favor, insira uma nota de 0 a 10.");
+            num = scanner.nextFloat();
+        }
+        System.out.printf("A nota inserida é: %.1f", num);
+        //scanner.close();
+    }
+
+    public static void exercicio13() {
+        int votosC1 = 0, votosC2 = 0, votosC3 = 0, voto, qtEleitores, votosBranco = 0, votosNulo = 0;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Insira a quantidade de eleitores: ");
+        qtEleitores = scanner.nextInt();
+
+        for (int i = 1; i <= qtEleitores; i++) {
+            System.out.println("~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~");
+            System.out.printf("Eleitor nº%d, insira seu voto: \n", i);
+            System.out.println("~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~");
+
+            System.out.println("[1] Candidato 1");
+            System.out.println("[2] Candidato 2");
+            System.out.println("[3] Candidato 3");
+            System.out.println("[0] Voto em branco");
+
+            voto = scanner.nextInt();
+
+            switch (voto) {
+                case 1:
+                    votosC1++;
+                    break;
+
+                case 2:
+                    votosC2++;
+                    break;
+
+                case 3:
+                    votosC3++;
+                    break;
+
+                case 0:
+                    votosBranco++;
+                    break;
+
+                default:
+                    votosNulo++;
+            }
+        }
+        System.out.println("\n~-~-~-~-~-~-~-~-~-~-~-~");
+        System.out.println("Resultado das Eleições");
+        System.out.println("~-~-~-~-~-~-~-~-~-~-~-~\n");
+
+        System.out.printf("Candidato 1: %d votos\n", votosC1);
+        System.out.printf("Candidato 2: %d votos\n", votosC2);
+        System.out.printf("Candidato 3: %d votos\n", votosC3);
+        System.out.printf("Votos brancos e nulos: %d votos\n", votosBranco + votosNulo);
+        //scanner.close();
+    }
+    
+     public static void exercicio14() {
+        int numero;
+        Scanner scanner = new Scanner(System.in);
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.print("Insira os números para validação: ");
+            numero = scanner.nextInt();
+
+            if (numero <= 0) {
+                System.out.println("Insira um número válido!");
+                i--;
+            } else {
+                verificaPrimo(numero);
+            }
+        }
+    }
+
+    public static boolean verificaPrimo(int numero) {
+        if (numero <= 1) {
+            System.out.printf("O número %d não é primo!\n\n", numero);
+            return false;
+        }
+        for (int i = 2; i <= (numero / 2); i++) {
+            if (numero % i == 0) {
+                System.out.printf("O número %d não é primo!\n\n", numero);
+                return false;
+            }
+        }
+        System.out.printf("O número %d é primo!\n\n", numero);
+        return true;
+    }
+    
+     public static void exercicio15(){
+       int soma = 0, num1 = 0, num2 = 1;
+       
+       for (int i = 0; i <10; i++) {
+           System.out.printf("%d\n", soma);
+           
+           num1 = num2;
+           num2 = soma;
+           soma = (num1 + num2);
+       }
+    }
+     
+      public static void exercicio16() {
+       int numero, resultado = 1;
+       Scanner scanner = new Scanner(System.in);
+       
+          System.out.print("Insira um número: ");
+          numero = scanner.nextInt();
+          
+          for (int i = numero; i > 1; i--) {
+              resultado *= i;
+       } System.out.printf("O fatorial de %d é %d", numero, resultado);
+    }
+
+       public static void exercicio17() {
+        int[] vetor = new int[5];
+        Scanner scanner = new Scanner(System.in);
+
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Insira um número: ");
+            vetor[i] = scanner.nextInt();
+        }
+        /**
+         * for (int item : vetor) { // System.out.printf("\nO item é %d", item);
+         * }
+         */
+        System.out.print("Os números no vetor são: ");
+        System.out.println(Arrays.toString(vetor));
+    }
 }
