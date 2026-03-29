@@ -123,6 +123,7 @@ public class ProgWebI_L1 {
 
         media = ((n1 + n2 + n3) / 3);
         System.out.printf("A média do aluno é %.1f", media);
+        //scanner.close();
     }
 
     /**
@@ -138,6 +139,7 @@ public class ProgWebI_L1 {
 
         cm = (metros * 100);
         System.out.printf("O tamanho em centímetros é %.0f", cm);
+        //scanner.close();
     }
 
     /**
