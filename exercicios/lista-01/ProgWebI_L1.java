@@ -29,75 +29,51 @@ public class ProgWebI_L1 {
             opcao = scanner.nextInt();
 
             switch (opcao) {
-                case 1:
-                    exercicio01();
-                    break;
+                case 1 -> exercicio01();
 
-                case 2:
-                    exercicio02();
-                    break;
+                case 2 -> exercicio02();
 
-                case 3:
-                    exercicio03();
-                    break;
+                case 3 -> exercicio03();
 
-                case 4:
-                    exercicio04();
-                    break;
+                case 4 -> exercicio04();
 
-                case 5:
-                    exercicio05();
-                    break;
+                case 5 -> exercicio05();
 
-                case 6:
-                    exercicio06();
-                    break;
+                case 6 -> exercicio06();
 
-                case 7:
-                    exercicio07();
-                    break;
+                case 7 -> exercicio07();
 
-                case 8:
-                    exercicio08();
-                    break;
+                case 8 -> exercicio08();
 
-                case 9:
-                    exercicio09();
-                    break;
-                case 10:
-                    exercicio10();
-                    break;
+                case 9 -> exercicio09();
+                
+                case 10 -> exercicio10();
 
-                case 11:
-                    exercicio11();
-                    break;
+                case 11 -> exercicio11();
 
-                case 12:
-                    exercicio12();
-                    break;
-                    
-                case 13:
-                    exercicio13();
-                    break;
-                    
-                    case 14:
-                    exercicio14();
-                    break;
-                    
-                    case 15:
-                    exercicio15();
-                    break;
-                    
-                    case 16:
-                    exercicio16();
-                    break;
-                    
-                    case 17:
-                    exercicio17();
-                    break;
-                    
-                    
-                    
+                case 12 -> exercicio12();
+
+                case 13 -> exercicio13();
+
+                case 14 -> exercicio14();
+
+                case 15 -> exercicio15();
+
+                case 16 -> exercicio16();
+
+                case 17 -> exercicio17();
+
+                case 18 -> exercicio18();
+
+                case 19 -> exercicio19();
+
+                case 20 -> exercicio20();
+
+                case 21 -> exercicio21();
+
+                case 22 -> exercicio22();
+
+                case 23 -> exercicio23();
             }
 
             System.out.println("\nPrograma encerrado!\n\n");
@@ -368,6 +344,12 @@ public class ProgWebI_L1 {
         //scanner.close();
     }
 
+    /**
+     * Q13: Numa eleição existem três candidatos. Faça um programa na linguagem
+     * Java que peça o número total de eleitores pelo teclado. Peça para cada
+     * eleitor vota pelo teclado e, ao final, mostre no console o número de
+     * votos de cada candidato.
+     */
     public static void exercicio13() {
         int votosC1 = 0, votosC2 = 0, votosC3 = 0, voto, qtEleitores, votosBranco = 0, votosNulo = 0;
         Scanner scanner = new Scanner(System.in);
@@ -388,23 +370,19 @@ public class ProgWebI_L1 {
             voto = scanner.nextInt();
 
             switch (voto) {
-                case 1:
+                case 1 ->
                     votosC1++;
-                    break;
 
-                case 2:
+                case 2 ->
                     votosC2++;
-                    break;
 
-                case 3:
+                case 3 ->
                     votosC3++;
-                    break;
 
-                case 0:
+                case 0 ->
                     votosBranco++;
-                    break;
 
-                default:
+                default ->
                     votosNulo++;
             }
         }
@@ -418,8 +396,14 @@ public class ProgWebI_L1 {
         System.out.printf("Votos brancos e nulos: %d votos\n", votosBranco + votosNulo);
         //scanner.close();
     }
-    
-     public static void exercicio14() {
+
+    /**
+     * Q14: Faça um programa na linguagem Java que receba, pelo teclado, 10
+     * números inteiros maior que 1, verifique se cada número fornecido é primo
+     * ou não e mostre no console uma mensagem de número primo ou de número não
+     * primo. Um número é primo quando é divisível apenas por 1 e por ele mesmo.
+     */
+    public static void exercicio14() {
         int numero;
         Scanner scanner = new Scanner(System.in);
 
@@ -450,32 +434,46 @@ public class ProgWebI_L1 {
         System.out.printf("O número %d é primo!\n\n", numero);
         return true;
     }
-    
-     public static void exercicio15(){
-       int soma = 0, num1 = 0, num2 = 1;
-       
-       for (int i = 0; i <10; i++) {
-           System.out.printf("%d\n", soma);
-           
-           num1 = num2;
-           num2 = soma;
-           soma = (num1 + num2);
-       }
-    }
-     
-      public static void exercicio16() {
-       int numero, resultado = 1;
-       Scanner scanner = new Scanner(System.in);
-       
-          System.out.print("Insira um número: ");
-          numero = scanner.nextInt();
-          
-          for (int i = numero; i > 1; i--) {
-              resultado *= i;
-       } System.out.printf("O fatorial de %d é %d", numero, resultado);
+
+    /**
+     * Q15: Faça um programa na linguagem Java que mostre, no console, os
+     * primeiros 10 termos da sequência de Fibonacci: 0-1-1-2-3-5-8-13-21-34-...
+     */
+    public static void exercicio15() {
+        int soma = 0, num1 = 0, num2 = 1;
+
+        for (int i = 0; i < 10; i++) {
+            System.out.printf("%d\n", soma);
+
+            num1 = num2;
+            num2 = soma;
+            soma = (num1 + num2);
+        }
     }
 
-       public static void exercicio17() {
+    /**
+     * Q16: Faça um programa na linguagem Java que dado um número inteiro
+     * positivo lido pelo teclado, calcule o fatorial do número e mostre o
+     * resultado no console.
+     */
+    public static void exercicio16() {
+        int numero, resultado = 1;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Insira um número: ");
+        numero = scanner.nextInt();
+
+        for (int i = numero; i > 1; i--) {
+            resultado *= i;
+        }
+        System.out.printf("O fatorial de %d é %d", numero, resultado);
+    }
+
+    /**
+     * Q17: Faça um programa na linguagem Java que preencha, por meio do
+     * teclado, um vetor de 5 números inteiros e mostre-os no console.
+     */
+    public static void exercicio17() {
         int[] vetor = new int[5];
         Scanner scanner = new Scanner(System.in);
 
@@ -489,5 +487,202 @@ public class ProgWebI_L1 {
          */
         System.out.print("Os números no vetor são: ");
         System.out.println(Arrays.toString(vetor));
+        //scanner.close();
     }
+
+    /**
+     * Q18: Faça um programa na linguagem Java que preencha, por meio do
+     * teclado, um vetor de 10 números reais e mostre-os no console na ordem
+     * inversa.
+     */
+    public static void exercicio18() {
+        Scanner scanner = new Scanner(System.in);
+        float[] vetor = new float[10];
+
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Insira o número: ");
+            vetor[i] = scanner.nextFloat();
+        }
+        for (int i = 9; i >= 0; i--) {
+            System.out.printf("%.1f \n", vetor[i]);
+        }
+        //scanner.close();
+    }
+
+    /**
+     * Q19: Faça um programa na linguagem Java que preencha por meio do teclado
+     * um vetor de 5 números inteiros e, depois, mostre no console a soma dos 5
+     * números, a multiplicação entre os 5 números e os 5 números.
+     */
+    public static void exercicio19() {
+        Scanner scanner = new Scanner(System.in);
+        int soma = 0, multi = 1;
+        int[] vetor = new int[5];
+
+        System.out.println("Insira os 5 números a serem calculados: ");
+        for (int i = 0; i < 5; i++) {
+            vetor[i] = scanner.nextInt();
+            soma += vetor[i];
+            multi *= vetor[i];
+        }
+
+        System.out.printf("A soma dos números inseridos é %d. \n", soma);
+        System.out.printf("A multiplicação dos números inseridos é %d. \n", multi);
+        System.out.println("Os números inseridos são:");
+        for (int i = 0; i < 5; i++) {
+            System.out.printf("%d ", vetor[i]);
+        }
+        //scanner.close();
+    }
+
+    /**
+     * Q20: Faça um programa na linguagem Java que receba, pelo teclado, 20
+     * números inteiros e armazene-os em um vetor. Armazene os números pares no
+     * vetor denominado “par” e os números ímpares no vetor “ímpar”. Mostre no
+     * console os três vetores.
+     */
+    public static void exercicio20() {
+        Scanner scanner = new Scanner(System.in);
+        int[] vetor = new int[20];
+        int tamPar = 0, tamImpar = 0;
+        int j = 0, k = 0;
+
+        System.out.println("Insira os números: ");
+        for (int i = 0; i < 20; i++) {
+            vetor[i] = scanner.nextInt();
+
+            if (vetor[i] % 2 == 0) {
+                tamPar++;
+            } else {
+                tamImpar++;
+            }
+        }
+
+        int[] par = new int[tamPar];
+        int[] impar = new int[tamImpar];
+        System.out.println("\n\nVetor normal: ");
+        for (int item : vetor) {
+            System.out.printf("%d ", item);
+
+            if (item % 2 == 0) {
+                par[j] = item;
+                j++;
+            } else {
+                impar[k] = item;
+                k++;
+            }
+        }
+
+        System.out.println("\n\nVetor par: ");
+        for (int item : par) {
+            System.out.printf("%d ", item);
+        }
+
+        System.out.println("\n\nVetor ímpar: ");
+        for (int item : impar) {
+            System.out.printf("%d ", item);
+        }
+    }
+
+    /**
+     * Q21: Faça um programa na linguagem Java que receba, pelo teclado, 2
+     * Strings e informe, pelo console, o conteúdo delas seguido do seu
+     * comprimento. Mostre também, no console, se as duas Strings possuem o
+     * mesmo comprimento e são iguais ou diferentes no conteúdo.
+     */
+    public static void exercicio21() {
+        Scanner scanner = new Scanner(System.in);
+        String string1;
+        String string2;
+
+        System.out.println("Insira o conteúdo da String 1: ");
+        string1 = scanner.nextLine();
+
+        System.out.println("Insira o conteúdo da String 2: ");
+        string2 = scanner.nextLine();
+
+        System.out.printf("String 1: %s (%d caracteres)\n", string1, string1.length());
+        System.out.printf("String 2: %s (%d caracteres)\n", string2, string2.length());
+
+        if (string1.length() == string2.length()) {
+            System.out.println("O tamanho das strings é IGUAL!");
+        } else {
+            System.out.println("O tamanho das String é DIFERENTE!");
+        }
+
+        if (string1.equals(string2)) {
+            System.out.println("O conteúdo das strings é IGUAL!");
+        } else {
+            System.out.println("O conteúdo das strings é DIFERENTE!");
+        }
+        //scanner.close();
+    }
+
+    /**
+     * Q22: Reverso do número. Faça um programa na linguagem Java que mostre, no
+     * console, o reverso de um número inteiro informado pelo teclado. Por
+     * exemplo: 127 <-> 721.
+     */
+    public static void exercicio22() {
+        Scanner scanner = new Scanner(System.in);
+        int num, numInv = 0, digito;
+
+        System.out.print("Insira um número: ");
+        num = scanner.nextInt();
+        int numInicial = num;
+        while (num != 0) {
+            digito = num % 10;
+            numInv = numInv * 10 + digito;
+            num /= 10;
+        }
+
+        System.out.printf("%d <--> %d", numInicial, numInv);
+        //scanner.close();
+    }
+
+    /**
+     * Q23: . Calculadora básica. Faça um programa na linguagem Java que,
+     * recebidos pelo teclado dois valores numéricos e a operação desejada
+     * (soma, subtração, multiplicação ou divisão) mostre, no console, o
+     * resultado do cálculo.
+     */
+    public static void exercicio23() {
+        Scanner scanner = new Scanner(System.in);
+        float num1, num2, resultado;
+        String operacao;
+
+        System.out.print("Insira a operação do seu cálculo (soma, subtração, multiplicação, divisão): ");
+        operacao = scanner.nextLine().toUpperCase();
+
+        System.out.print("Insira o primeiro valor: ");
+        num1 = scanner.nextFloat();
+        System.out.print("Insira o segundo valor: ");
+        num2 = scanner.nextFloat();
+
+        switch (operacao) {
+            case "SOMA" -> {
+                resultado = num1 + num2;
+                System.out.printf("O resultado é: %.1f", resultado);
+            }
+
+            case "SUBTRAÇÃO" -> {
+                resultado = num1 - num2;
+                System.out.printf("O resultado é: %.1f", resultado);
+            }
+
+            case "MULTIPLICAÇÃO" -> {
+                resultado = num1 * num2;
+                System.out.printf("O resultado é: %.1f", resultado);
+            }
+
+            case "DIVISÃO" -> {
+                resultado = num1 / num2;
+                System.out.printf("O resultado é: %.1f", resultado);
+            }
+
+            default ->
+                System.out.println("Operação Inválida! Tente novamente!");
+        }
+    }
+    //scanner.close();
 }
