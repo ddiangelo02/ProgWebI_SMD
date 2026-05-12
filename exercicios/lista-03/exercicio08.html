@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 08 - PW1_SMD</title>
+</head>
+<!--  Crie um formulário HTML que possua os seguintes campos: nome, login e senha
+Todos os campos são obrigatórios e devem ser preenchidos com algo válido
+Implemente uma função JavaScript para verificar se todos os campos estão preenchidos com algo válido
+Em especial, a senha deve ser uma senha forte
+• Uma senha para ser considerada forte deve ter pelo menos um 
+caractere em maiúsculo, um caractere em minúsculo e um 
+caractere especial e no mínimo 4 caracteres -->
+<body>
+    <form onsubmit="validarForm()">
+        <label for="nome">Nome:<span style="color:red">*</span></label>
+        <br>
+        <input type="text" name="nome" id="nome" required placeholder="Insira seu nome">
+        <br>
+        <label for="login">Insira seu login:<span style="color:red">*</span></label>
+        <br>
+        <input type="text" name="login" id="login" required placeholder="login">
+        <br>
+        <label for="senha">Insira sua senha:<span style="color:red">*</span></label>
+        <br>
+        <input type="password" name="senha" id="senha" required placeholder="senha">
+        <br>
+        <button type="submit">Enviar</button>
+
+    </form>
+    <script type="text/javascript">
+        function validarForm() {
+            let validaForm = true;
+            var senha = document.getElementById('senha').value;
+            var credenciais = document.querySelectorAll('input');
+
+            credenciais.forEach(element => {
+                if (element.value.trim() == "") {
+                    validaForm = false;
+                }
+            });
+
+            if(!validaForm) {
+                alert("Insira credenciais válidas!");
+            }
+
+            if (senha.length < 4) {
+                alert("A senha precisa ter, no mínimo, 4 caracteres.");
+                return;
+            }
+
+            if (!/[A-Z]/.test(senha)) {
+                alert("A senha precisa ter, pelo menos 1 caractere em letras MAIÚSCULAS");
+                return;
+            }
+
+            if (!/[a-z]/.test(senha)) {
+                alert("A senha precisa ter, pelo menos 1 caractere em letras minúsculas");
+                return;
+            }
+
+            if (!/[^a-zA-Z0-9]/.test(senha)) {
+                alert("A senha precisa ter, pelo menos 1 caractere escpecial");
+                return;
+            }
+
+            alert("Credenciais inseridas com sucesso!");
+            return;
+        }
+
+    </script>
+</body>
+
+</html>

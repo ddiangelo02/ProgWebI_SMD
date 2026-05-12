@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 07 - PW1_SMD</title>
+</head>
+<!-- Crie um formulário HTML que possua vários 
+campos do tipo radio e implemente uma 
+função JavaScript que verifique se pelo 
+menos um campo do tipo radio está 
+selecionado -->
+<body>
+    <form>
+        <label for="frutas">Selecione a melhor personagem de Arcane:</label>
+        <br>
+        <input type="radio" name="Jinx" id="Jinx">
+        <label for="Jinx">Jinx</label>
+        <br>
+        <input type="radio" name="Vi id=" Vi">
+        <label for="Vi">Vi</label>
+        <br>
+        <input type="radio" name="Caitlyn" id="Caytlin">
+        <label for="Caitlyn">Caitlyn</label>
+        <br>
+        <button type="submit" onclick="verificaCampo()">Enviar</button>
+        
+    </form>
+    <script type="text/javascript">
+        function verificaCampo() {
+            var selecionado = document.querySelectorAll('input[type="radio"]:checked').length;
+            if (selecionado > 0) {
+                alert('Escolha registrada!')
+            } else {
+                alert('Escolha pelo menos 1.')
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

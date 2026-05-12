@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06 - PW1_SMD</title>
+</head>
+<!-- Crie um formulário HTML que possua vários 
+campos do tipo checkbox e implemente uma 
+função JavaScript que faça a contagem de 
+quantos campos do tipo checkbox estão 
+selecionados -->
+<body>
+    <form>
+        <label for="frutas">Selecione as suas frutas favoritas:</label>
+        <br>
+        <input type="checkbox" name="melancia" id="melancia">
+        <label for="melancia">Melancia</label>
+        <br>
+        <input type="checkbox" name="melão" id="melão">
+        <label for="melão">Melão</label>
+        <br>
+        <input type="checkbox" name="morango" id="morango">
+        <label for="morango">Morango</label>
+        <br>
+        <input type="checkbox" name="goiaba" id="goiaba">
+        <label for="goiaba">Goiaba</label>
+        <br>
+        <input type="checkbox" name="uva" id="uva">
+        <label for="uva">Uva</label>
+        <br>
+        <input type="checkbox" name="caju" id="caju">
+        <label for="caju">Caju</label>
+        <br>
+        <button type="submit" onclick="verificaCampo()">Enviar</button>
+    </form>
+    <script type="text/javascript">
+        function verificaCampo() {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked').length;
+            alert ('Você selecionou ' + checkboxes + ' frutas favoritas!')
+        }
+
+    </script>
+</body>
+
+</html>
