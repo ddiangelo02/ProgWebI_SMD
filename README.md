@@ -20,7 +20,25 @@ Este repositório organiza os exemplos, exercícios e projetos desenvolvidos ao 
 ```text
 |-- exercicios/
 |   |-- lista-01/
-|   `-- ...
+|   |	`-- ProgWebI_L1.java
+|	|
+|   |-- lista-02/
+|	|	|-- modelo/
+|	|	|	|-- Assinatura.java
+|	|	|	|-- AssinaturaDAO.java
+|	|   |	`-- Categoria.java
+|	|   `-- App.java
+|	|
+|   `-- lista-03/
+|		|-- exercicio01.html
+|		|-- exercicio02.html
+|		|-- exercicio03.html
+|		|-- exercicio04.html
+|		|-- exercicio05.html
+|		|-- exercicio06.html
+|		|-- exercicio07.html
+|		|-- exercicio08.html
+|		`-- index.html
 |
 |-- projeto/
 |   `-- ...
